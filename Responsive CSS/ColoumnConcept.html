@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coloumn Concept</title>
+	<style type="text/css">
+		.col-1 {width: 8.33%}
+		.col-2 {width: 16.66%}
+		.col-1 {width: 25%}
+		.col-1 {width: 33.33%}
+		.col-1 {width: 41.66%}
+		.col-1 {width: 50%}
+		.col-1 {width: 58.33%}
+		.col-1 {width: 66.66%}
+		.col-1 {width: 75%}
+		.col-1 {width: 83.33%}
+		.col-1 {width: 91.66%}
+		.col-1 {width: 100%}
+
+		[class*="col-"] {
+			float: left;
+			padding: 15px;
+			border: 1px solid red;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		.row {
+			height: 100%;
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+		.header {
+			padding: 20px;
+			border: 1px solid #9933cc;
+			width: 100%;
+			height: 20%;
+			background: #9933cc;
+			color: #ffffff;
+		}
+		.footer {
+			padding: 20px;
+			border: 1px solid #9933cc;
+			width: 100%;
+			height: 20%;
+			background: #9933cc;
+			color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>China</h1>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<ul>
+				<li><a href="#">The flight</a></li>
+				<li><a href="#">The city</a></li>
+				<li><a href="#">The food</a></li>
+				<li><a href="#">The island</a></li>
+			</ul>
+		</div>
+		<div class="col-9">
+			<h2>China</h2>
+			<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.<br><br>Resize the browser window to see how the content respond to the resizing.</p>
+		</div>
+	</div>
+	<div class="footer">
+		<h3>A Big country</h3>
+	</div>
+</body>
+</html>

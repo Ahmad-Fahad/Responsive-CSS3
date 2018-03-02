@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@media Queries</title>
+	<style type="text/css">
+		ul {
+    		list-style-type: none;
+		}
+
+		ul li a {
+    		color: green;
+    		text-decoration: none;
+    		padding: 3px;
+    		display: block;
+    		color: #ffffff;
+		}
+		ul li a:after {
+			content: "   (" attr(data-email) ")";
+		}
+		ul li a:before {
+			content: "Email :  ";
+		}
+		body {
+			background: green;
+		}
+		@media screen and (orientation: landscape) {
+			body {
+				background: blue;
+			}
+		} 
+		@media screen and (orientation: portrait) {
+			body {
+				background: magenta;
+			} 
+		}
+		@media screen and (min-width: 700px) {
+			body {
+				background: purple;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			body {
+				background: red;
+			}
+		}
+		@media screen and (max-width: 900px) and (min-width: 750px) {
+			body {
+				background: orange;
+			}
+		}
+		@media screen and (max-width: 699px) and (min-width: 401), (min-width: 901px) {
+			body {
+				background: black;
+			}
+			ul li a {
+    		color: green;
+    		text-decoration: none;
+    		padding: 3px;
+    		display: block;
+    		color: #ffffff;
+    		font-style: italic;
+    		font-size: 24px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a dara-email="aaa@example.com" href="mailto:aaa@example.com">AAA</a></li>
+		<li><a dara-email="aaa@example.com" href="mailto:aaa@example.com">BBB</a></li>
+		<li><a dara-email="aaa@example.com" href="mailto:aaa@example.com">CCC</a></li>
+		<li><a dara-email="aaa@example.com" href="mailto:aaa@example.com">DDD</a></li>
+	</ul>
+</body>
+</html>
